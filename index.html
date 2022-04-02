@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Space Punks</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="h-full bg-gray-700"> 
+  <main class="p-10 flex justify-center">
+    <div class="w-4/5">
+      <div class="mb-5">
+        <button id="wallet_connection_button" 
+          class="border-2 border-yellow-500 bg-blue-700 text-white transition-colors px-4 outline-none py-1 uppercase rounded-md text-xl font-semibold">
+          Connect your wallet
+        </button>
+      </div>
+      <div id="nfts" class="flex gap-7 flex-wrap"></div>
+    </div>
+  </main>
+  <main class="p-10 flex justify-center">
+    <div class="w-4/5">
+      <div class="mb-10">
+        <label class="border-2 border-blue-500 px-4 py-1 uppercase rounded-md text-xl font-semibold outline-none">Mint an image to an address </label>
+      </div>
+      <div class="mb-10">
+        <input type="text" id="miting_address" autofocus autocomplete="off" value="0x68a8bB406838f31fEe0aB89398355E71160fD11B" placeholder="miting address" 
+          class="w-2/5 border-2 border-blue-500 px-4 py-1 uppercase rounded-md text-xl text-blue-800 font-semibold outline-none">
+      </div>
+      <div class="mb-10">
+        <input type="text" id="image_url" autofocus autocomplete="off" 
+          value="https://ipfs.infura.io/ipfs/QmNcT1pW6QsBnnvC3y57XpSdRnY9rKWUZQyJ4AwNCQpFcd" placeholder="miting address" 
+          class="w-2/5 border-2 border-blue-500 px-4 py-1 uppercase rounded-md text-xl text-blue-800 font-semibold outline-none">
+      </div>
+      <div class="mb-10">
+        <button id="mint_button" class="border-2 border-blue-500 bg-blue-700 text-white transition-colors px-4 outline-none py-1 uppercase rounded-md text-xl font-semibold">
+          safe mint
+        </button>
+      </div>
+    </div>
+  </main>
+  <main class="p-10 flex justify-center min-h-full">
+    <div class="w-4/5">
+      <div class="mb-10">
+        <input type="text" id="wallet_address" autofocus autocomplete="off" value="0x68a8bB406838f31fEe0aB89398355E71160fD11B" placeholder="Wallet address" class="w-2/5 border-2 border-blue-500 px-4 py-1 uppercase rounded-md text-xl text-blue-800 font-semibold outline-none">
+
+        <button id="load_nft_button" class="border-2 border-blue-500 bg-blue-700 text-white transition-colors px-4 outline-none py-1 uppercase rounded-md text-xl font-semibold">
+          Load Contract NFTs
+        </button>
+      </div>
+
+      <div id="nfts" class="flex gap-7 flex-wrap"></div>
+    </div>
+  </main>
+
+  <template id="nft_template">
+    <section>
+      <h1 class="font-bold bg-yellow-500 text-white text-center rounded-t-md"></h1>
+
+      <a href="" target="_blank">
+        <img class="rounded-b-md w-40 h-40" src="" alt="">
+      </a>
+    </section>
+  </template>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
